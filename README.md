@@ -10,15 +10,17 @@ eplus_download --url <eplus url> ...
 ![Snipaste_2024-02-12_04-28-31](https://github.com/AlanWanco/Simple_Eplus_DL/assets/45628961/94b298bd-7530-475e-bdfd-f471a6362ace)
 * 根据需求设置下载即可
 * 内封`片段编号与视频时间戳转换.html`，根据可以根据时间戳或片段地址手动互转
-* 附赠`eplus_m3u8_maker.exe`手动构造m3u8，如何构造可以`-h`查看说明（和上面的各命令情况类似）。
+* 附赠`eplus_m3u8_maker.exe`手动构造m3u8，如何构造可以`-h`查看说明（和下面的各命令情况类似）。
 * 构造结束后发送手动构造内容到剪贴板，可以同时打开eplus页面和浏览器插件猫抓把m3u8内容粘贴进去之后直接播放m3u8地址以精确定位所需时间戳
 ![image](https://github.com/AlanWanco/Simple_Eplus_DL/assets/45628961/996eb8fa-a737-4e37-9c20-0e5c264ecacc)
+
 ![image](https://github.com/AlanWanco/Simple_Eplus_DL/assets/45628961/934a9248-42af-4971-9352-f03031d89c79)
+
 ![image](https://github.com/AlanWanco/Simple_Eplus_DL/assets/45628961/515ad447-3b01-4e22-a119-a1190efa7db8)
+
 ![image](https://github.com/AlanWanco/Simple_Eplus_DL/assets/45628961/5b75c794-94d9-45d6-9c85-ce9125f22965)
+
 ![image](https://github.com/AlanWanco/Simple_Eplus_DL/assets/45628961/0887eaff-4e0b-4497-9190-af172a75f2ab)
-
-
 
 # 各命令解释
 * `-h`：获取帮助
