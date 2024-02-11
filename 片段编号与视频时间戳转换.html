@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>片段编号与视频时间戳转换</title>
+    <style>
+        body {
+            color: #ddd;
+            background-color: #222;
+        }
+
+        h1, h3 {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 70px;
+        }
+
+        input[type="number"] {
+            width: 50px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function convertToTimestamp() {
+            var segmentNumber = parseInt(document.getElementById("segmentNumberInput").value);
+            var timestamp = segmentNumber * 6;
+            var hours = Math.floor(timestamp / 3600);
+            var minutes = Math.floor((timestamp % 3600) / 60);
+            var seconds = timestamp % 60;
+            document.getElementById("timestampResult").innerText = formatTime(hours, minutes, seconds);
+        }
+
+        function convertToSegmentNumber() {
+            var hours = parseInt(document.getElementById("hoursInput").value);
+            var minutes = parseInt(document.getElementById("minutesInput").value);
+            var seconds = parseInt(document.getElementById("secondsInput").value);
+            var timestamp = hours * 3600 + minutes * 60 + seconds;
+            var segmentNumber = Math.ceil(timestamp / 6);
+            document.getElementById("segmentNumberResult").innerText = segmentNumber;
+        }
+
+        function formatTime(hours, minutes, seconds) {
+            var formattedTime = "";
+            if (hours > 0) {
+                formattedTime += hours + "时";
+            }
+            if (minutes > 0) {
+                formattedTime += minutes + "分";
+            }
+            if (seconds > 0) {
+                formattedTime += seconds + "秒";
+            }
+            return formattedTime;
+        }
+    </script>
+</head>
+<body>
+    <h1>片段编号与视频时间戳转换</h1>
+
+    <h3>编号转时间戳</h3>
+    <label for="segmentNumberInput">输入片段编号：</label>
+    <input type="number" id="segmentNumberInput">
+    <button onclick="convertToTimestamp()">转换</button>
+    <p id="timestampResult"></p>
+
+    <h3>时间戳转编号</h3>
+    <input type="number" id="hoursInput">
+    <label for="hoursInput">时：</label>
+
+    <input type="number" id="minutesInput">
+    <label for="minutesInput">分：</label>
+
+    <input type="number" id="secondsInput">
+    <label for="secondsInput">秒：</label>
+    <button onclick="convertToSegmentNumber()">转换</button>
+    <p id="segmentNumberResult"></p>
+</body>
+</html>
